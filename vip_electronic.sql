@@ -2,6 +2,8 @@
 -- Base de datos: `vip_electronic`
 --
 
+CREATE DATABASE vip_electronic;
+
 -- --------------------------------------------------------
 
 --
@@ -13,7 +15,7 @@ CREATE TABLE `administrador` (
   `nombre` varchar(100) NOT NULL,
   `correo` varchar(100) NOT NULL,
   `telefono` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,7 @@ CREATE TABLE `cliente` (
   `direccion` varchar(255) DEFAULT NULL,
   `telefono` varchar(20) DEFAULT NULL,
   `correo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -41,7 +43,7 @@ CREATE TABLE `contrato` (
   `estado` varchar(50) DEFAULT NULL,
   `fecha_inicio` date DEFAULT NULL,
   `fecha_fin` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -54,7 +56,7 @@ CREATE TABLE `empleado` (
   `nombre` varchar(100) NOT NULL,
   `correo` varchar(100) NOT NULL,
   `telefono` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -66,7 +68,7 @@ CREATE TABLE `factura` (
   `num_factura` int(11) NOT NULL,
   `monto` float DEFAULT NULL,
   `fechaemision` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,7 @@ CREATE TABLE `incidencia` (
   `numerofallas` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL,
   `numreporte` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,7 @@ CREATE TABLE `pago` (
   `monto` float DEFAULT NULL,
   `num_factura` int(11) NOT NULL,
   `tipo_documento` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,7 @@ CREATE TABLE `reporte` (
   `cliente` varchar(50) DEFAULT NULL,
   `empleado` varchar(50) DEFAULT NULL,
   `servicio` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,7 @@ CREATE TABLE `servicio` (
   `descripcion` text DEFAULT NULL,
   `fecha_servicio` date DEFAULT NULL,
   `estado` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(100) NOT NULL,
   `contrasena` varchar(100) NOT NULL,
   `correo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 --
 -- Índices para tablas volcadas
